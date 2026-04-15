@@ -4,13 +4,13 @@
 
 #include <string.h>
 
-#include <conio.h>   // Usa para getch() — leitura de senha mascarada
+#include <conio.h>   // Usa para getch() ï¿½ leitura de senha mascarada
 
 #include "funcoes.h"
 
 
 
-// Função de login com até 3 tentativas
+// Funï¿½ï¿½o de login com atï¿½ 3 tentativas
 
 int login() {
 
@@ -22,11 +22,11 @@ int login() {
 
 
 
-  // Credenciais padrão (poderiam futuramente vir de um arquivo ou banco)
+  // Credenciais padrï¿½o (poderiam futuramente vir de um arquivo ou banco)
 
-  char userCorreto[] = "admin";
+  char userCorreto[] = "seuusuario";
 
-  char senhaCorreta[] = "1234";
+  char senhaCorreta[] = "suasenha";
 
 
 
@@ -46,7 +46,7 @@ int login() {
 
 
 
-    // Lê senha caracter por caracter, mascarando com '*'
+    // Lï¿½ senha caracter por caracter, mascarando com '*'
 
     while (1) {
 
@@ -116,11 +116,11 @@ int login() {
 
 
 
-// Salva os dados de um veículo em formato CSV (separado por ponto e vírgula)
+// Salva os dados de um veï¿½culo em formato CSV (separado por ponto e vï¿½rgula)
 
 void salvarDados(Veiculo v) {
 
-  FILE *arquivo = fopen("veiculos.txt", "a"); // “a” = append (acrescenta)
+  FILE *arquivo = fopen("veiculos.txt", "a"); // ï¿½aï¿½ = append (acrescenta)
 
   if (arquivo != NULL) {
 
@@ -140,7 +140,7 @@ void salvarDados(Veiculo v) {
 
 
 
-// Lê e exibe todos os veículos cadastrados
+// Lï¿½ e exibe todos os veï¿½culos cadastrados
 
 void lerDados() {
 
@@ -176,7 +176,7 @@ void lerDados() {
 
 
 
-// Permite editar os dados de um veículo com base na placa
+// Permite editar os dados de um veï¿½culo com base na placa
 
 void editarDados() {
 
@@ -212,7 +212,7 @@ void editarDados() {
 
 
 
-  // Lê cada linha e compara placa
+  // Lï¿½ cada linha e compara placa
 
   while (fscanf(arquivo, "%[^;];%[^;];%d;%[^;];%[^\n]\n",
 
@@ -240,7 +240,7 @@ void editarDados() {
 
 
 
-    // Regrava no arquivo temporário (alterado ou não)
+    // Regrava no arquivo temporï¿½rio (alterado ou nï¿½o)
 
     fprintf(temp, "%s;%s;%d;%s;%s\n", v.marca, v.modelo, v.ano, v.placa, v.cores);
 
@@ -254,7 +254,7 @@ void editarDados() {
 
   remove("veiculos.txt");       // Remove original
 
-  rename("temp.txt", "veiculos.txt"); // Renomeia arquivo temporário
+  rename("temp.txt", "veiculos.txt"); // Renomeia arquivo temporï¿½rio
 
 
 
@@ -270,7 +270,7 @@ void editarDados() {
 
 
 
-// Remove um veículo do arquivo com base na placa
+// Remove um veï¿½culo do arquivo com base na placa
 
 void excluirDados() {
 
